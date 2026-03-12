@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tsa-email-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GMAIL_USER
+        value: henry.ljatx@gmail.com
+      - key: GMAIL_PASSWORD
+        scope: secret
+      - key: PORT
+        value: 3000
